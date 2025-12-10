@@ -1,17 +1,126 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libyana</title>
-    <meta name="description" content="موقع شركة ليبيانا">
-    <meta name="keywords" content="Libyana, ليبيانا">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Libyana</title>
+  <style>
+    :root{--accent:#e60000;--dark:#0b1a2b;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Tahoma, "Segoe UI", Arial, sans-serif;margin:0;background:#f7f9fb;color:#0e1720}
+    header{background:linear-gradient(90deg,#fff 0%, #f2f6f8 100%);border-bottom:1px solid #e6eef5}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+    .topbar{display:flex;align-items:center;gap:12px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff7b7b);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--dark);text-decoration:none;padding:8px 10px;border-radius:6px}
+    nav a:hover{background:#eef6fb}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+    .hero-card{background:white;border-radius:10px;padding:22px;box-shadow:0 6px 18px rgba(12,30,50,0.06);display:flex;gap:18px;align-items:center}
+    .hero-card .left{flex:1}
+    .hero-card h1{margin:0 0 8px 0;font-size:22px}
+    .hero-card p{margin:0;color:var(--muted)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+    .hero-image{width:220px;height:120px;border-radius:8px;background:linear-gradient(135deg,#dfeffc,#bfe1ff)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .card{background:white;padding:14px;border-radius:10px;box-shadow:0 6px 14px rgba(12,30,50,0.06)}
+    .card h3{margin:6px 0 8px 0}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .price{font-weight:700;color:var(--accent);margin-top:10px}
+
+    footer{margin-top:26px;padding:18px 0;background:#fff;border-top:1px solid #e6eef5}
+    .footer-grid{display:flex;gap:24px;flex-wrap:wrap}
+    .footer-grid div{min-width:160px}
+
+    /* responsive */
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-image{display:none}}
+    @media (max-width:600px){.topbar{flex-direction:column;align-items:flex-start}.grid{grid-template-columns:1fr}}
+
+    /* small helpers */
+    .lang-select{border:1px solid #e1eef6;padding:8px 10px;border-radius:8px;background:white}
+    .badge{display:inline-block;background:#f0f8ff;padding:6px 8px;border-radius:6px;font-size:13px;color:#075985}
+  </style>
 </head>
 <body>
-    <h1 align="center">this domain is for sell: <span style='color:#36a94d;'>500 $</span></h1>
-    <h3 align="center"><a href="https://t.me/Mr_w_23">telegram</a></h3>
-    <!--<p>هذه أيقونة المنزل: <i class="fas fa-home"></i></p>-->
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo">L</div>
+          <div>
+            <div style="font-weight:700">ليبيانا</div>
+            <div style="font-size:13px;color:var(--muted)">نسخة تصميم مُبسطة وذاتية التنفيذ</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <nav>
+            <ul>
+              <li><a href="#">الرئيسية</a></li>
+              <li><a href="#">الخدمات</a></li>
+              <li><a href="#">العروض</a></li>
+              <li><a href="#">المساعدة</a></li>
+            </ul>
+          </nav>
+          <div class="lang-select">العربية ▼</div>
+        </div>
+      </div>
+
+      <main class="hero">
+        <section class="hero-card" aria-label="عرض رئيسي">
+          <div class="left">
+            <h1>باقات الإنترنت المميزة</h1>
+            <p>اختر باقتك المناسبة — يومية، أسبوعية أو شهرية، مع إدارة سهلة عبر حسابك الشخصي.</p>
+            <a class="cta" href="#">اكتشف الباقات</a>
+          </div>
+          <div class="hero-image" role="img" aria-label="صورة توضيحية"></div>
+        </section>
+
+        <section class="grid" aria-label="عروض سريعة">
+          <article class="card">
+            <div class="badge">شريحة</div>
+            <h3>شريحة نت+</h3>
+            <p>بيانات كبيرة وسرعات عالية مع تحكم كامل من التطبيق.</p>
+            <div class="price">سعر يبدأ من 50 د.ل</div>
+          </article>
+
+          <article class="card">
+            <div class="badge">عرض</div>
+            <h3>قسطها</h3>
+            <p>احصل على هاتف بالتقسيط مع باقات لمدة 6 شهور.</p>
+            <div class="price">ابتداءً من 10 د.ل/شهر</div>
+          </article>
+
+          <article class="card">
+            <div class="badge">خدمة</div>
+            <h3>خدمة خالص</h3>
+            <p>شحن عداد الكهرباء سريع من رصيدك مباشرةً.</p>
+            <div class="price">متاحة الآن</div>
+          </article>
+
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-grid">
+          <div>
+            <strong>روابط سريعة</strong>
+            <ul style="padding-left:0;list-style:none;margin-top:8px;color:var(--muted)">
+              <li>الأسئلة الشائعة</li>
+              <li>مراكز الخدمة</li>
+              <li>تواصل معنا</li>
+            </ul>
+          </div>
+          <div>
+            <strong>تواصل</strong>
+            <p style="color:var(--muted);margin-top:8px">هاتف: 123456789 — بريد إلكتروني: info@example.com</p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </header>
 </body>
 </html>
